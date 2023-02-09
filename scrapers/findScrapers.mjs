@@ -13,7 +13,10 @@ export default async () => {
 		const name = $(`.Details-content--hidden-not-important > :nth-child(${index}) > :nth-child(${2})`).text().trim()
 		if (index > 2){
 			return results.push({
-				name
+				id: index - 2,
+				col1: name,
+				col2: `https://github.com/Equator-Studios/scrapers/blob/main/scrapers/${name}`,
+				col3: ''
 			});
 		}
 	});
